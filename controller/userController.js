@@ -6,6 +6,7 @@ import {
 } from "../utils/validation.js";
 import jwt from "jsonwebtoken";
 export const signup = async (req, res) => {
+  const JWT_SECRET = process.env.JWT_SECRET || "your_jwt_secret";
   try {
     const { username, email, password, phone, location } = req.body;
 
